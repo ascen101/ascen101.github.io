@@ -1,1 +1,172 @@
+<!DOCTYPE html>
+<html>
+<title>Tomfoolery Menu</title>
+<head>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Trolling">
+<meta property="og:description" content="Its called we do a little trolling">
+<meta property="og:image" content="https://assets.stickpng.com/thumbs/580b585b2edbce24c47b2a2c.png">
+<meta name="theme-color" content="#ffffff">
+  </head>
+  <style>
+    .background{
+background-color: #36393E;
+margin: 0;
+
+}
+    
+    .labels{
+color:white;
+font-family:'Segoe UI'; 
+font-size:20px;
+ margin:10px
+
+    }
+    .labels2{
+color:white;
+font-family:'Segoe UI'; 
+font-size:15px;
+ margin:10px
+
+    }
+    .thing
+    {
+overflow:hidden;
+position:fixed; 
+background-color:#292b2f;
+top:0;
+width:100%;
+
+
+    }
+    .contentdiv
+    {
+
+margin-top: 70px;
+text-align: center;
+border-width:4px;
+border-style:solid;
+border-color:#ff0000;
+width: 50%;
+border-radius: 20px;
+margin:auto;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  position: absolute;
+
+
+    }
+    .input{
+  width:500px;
+  resize:none;
+  font-family:'Segoe UI';
+  border-color:transparent;
+  color:white;
+  background:#40444b;
+  border-radius:5px;
+  margin:10px;
+
+    }
+    .buttons
+    {
+
+margin:10px;
+background-color:#ff0000;
+border-radius: 8px;
+font-family:'Segoe UI';
+color:white;
+width: 200px;
+height: 35px;
+border-color:transparent;
+cursor:pointer;
+font-size:15px;
+
+    }
+
+ 
+.scroll-left {
+ height: 50px;	
+ overflow: hidden;
+ position: relative;
+ background: #292b2f;
+ color: orange;
+ border-color: "transparent";
+ overflow:hidden;
+position:fixed; 
+top:0;
+width:100%;
+
+}
+.scroll-left p {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ text-align: center;
+ /* Starting position */
+ transform:translateX(100%);
+ /* Apply animation to this element */
+ animation: scroll-left 15s linear infinite;
+}
+/* Move it (define the animation) */
+@keyframes scroll-left {
+ 0%   {
+ transform: translateX(100%); 		
+ }
+ 100% {
+ transform: translateX(-100%); 
+ }
+}
+
+
+    </style>
+<body class="background">
+  
+  <div class="thing">
+<div class="scroll-left">
+<p style="font-family:'Segoe UI'; color: #f2f2f2;"><b>"We partake in a miniscule amount of tomfoolery" -Dhar Mann 2021<b></p>
+
+</div>
+  </div>
+
+<div style="text-align:center; margin:80px">
+    <label class="labels2"><b>To see the public domain logs, join the Discord</b></label>
+   <a  class="labels2" style="margin: -10px" href="https://discord.gg/948xa6xVtG" target="_blank"><b>here.</b></a><br> 
+   <label class="labels2"><b>To make your own version of this, see the source code</b></label>
+   <a  class="labels2" style="margin: -10px" href="https://raw.githubusercontent.com/cancels/logger/main/index.html" target="_blank"><b>here.</b></a><br><br>
+   </div>
+
+<div class="contentdiv">
+  <br><br><label class="labels" for="extension">Extension:</label><br>
+  <input class="input" type="text" id="extension" name="extension"><br><br>
+    <label class="labels" for="directory">Directory:</label><br>
+  <input class="input" type="text" id="directory" name="directory"><br>
+    <button class="buttons" onclick="make()">Generate</button><br><br>
+  <label class="labels">URLs:</label><br>
+  <label class="labels2" id="url">https://breakingnews.w3spaces.com#/[directory text]/[extension text]</label><br>
+   <label class="labels2" id="url2">https://latest-news.w3spaces.com#/[directory text]/[extension text]</label><br><br><br>
+
+
+<script>
+  function make() {
+
+var extension2 = document.getElementById('extension').value;
+var directory2 = document.getElementById('directory').value;
+extension2 = extension2.replace(/\s/g, "-")
+directory2 = directory2.replace(/\s/g, "-")
+var final = "https://breakingnews.w3spaces.com#/" + directory2 + "/" + extension2;
+var final2 = "https://latest-news.w3spaces.com#/" + directory2 + "/" + extension2;
+document.getElementById('url').innerHTML = final;
+document.getElementById('url2').innerHTML = final2;
+
+  }
+
+
+
+  </script>
+</body>
+</html>
 
